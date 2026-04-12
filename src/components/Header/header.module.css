@@ -1,0 +1,146 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(6, 6, 14, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.logoSub {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navLink {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-small);
+  transition: color var(--transition), background var(--transition);
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.navLink.active {
+  color: var(--accent-gold);
+  background: rgba(240, 192, 64, 0.08);
+  font-weight: 700;
+}
+
+.menuBtn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.menuBtn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  padding: 1rem 1.5rem 1.5rem;
+  gap: 0.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.mobileNav.open {
+  display: flex;
+}
+
+.mobileNavLink {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-small);
+  transition: all var(--transition);
+}
+
+.mobileNavLink:hover {
+  color: var(--text-primary);
+  background: var(--border-subtle);
+}
+
+.mobileNavLink.active {
+  color: var(--accent-gold);
+  background: rgba(240, 192, 64, 0.08);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .menuBtn {
+    display: flex;
+  }
+}

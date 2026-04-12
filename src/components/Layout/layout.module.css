@@ -1,0 +1,21 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.starBg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 15% 40%, rgba(77, 184, 255, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 15%, rgba(155, 109, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 55% 85%, rgba(240, 192, 64, 0.04) 0%, transparent 45%);
+}
+.main {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}

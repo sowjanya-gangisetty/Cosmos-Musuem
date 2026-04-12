@@ -1,0 +1,88 @@
+CosmosMuseum Website Plan
+
+1. Project Setup
+  - Create React project using Vite
+  - Install required dependencies
+    - react-router-dom (routing)
+  - Set up project folder structure
+
+2. Project folder structure
+    .src
+        .components
+        .assests/images 
+        .pages
+        .utils
+
+3. Data Structure Setup
+  - Create data file (museumData.js)
+  - Structure data with separate arrays for each section:
+      .Planets
+      .Spacecrafts
+      .Missions
+       
+4. create components
+    Header
+    Footer
+    Layout
+    pageHeading
+    MissionDetails
+
+5. Header Component
+  - Needs to have Logo and Navigation
+  - Navigation 
+      - Nav items array: Home, Exhibits, Missions, About
+      - NavLink with active class highlighting
+  
+6. Layout Component (with Outlet)
+  - Wraps every page via React Router <Outlet/>
+  - Renders <Header/> at top
+  - Renders <Footer/> at bottom
+
+7. Reusable pageHeading Component
+  - Props: { eventTitle, title, highlight, subtitle }
+  - Used at the top of Exhibits, Missions, About pages
+
+8. Router Setup in App.jsx
+    - Home
+    - Exhibits
+        - Planets
+        - Spacecrafts
+    - Missions
+    - About    
+
+
+9. Home Page
+  - Contains a welcome message with little text
+
+10. Exhibits Page (Parent)
+  - Renders sub-navigation: Planets | Spacecrafts
+    - <NavLink> with active underline style
+  - If path is exactly /exhibits -- show index grid (two big cards linking to sub-pages)
+  - Otherwise -- renders <Outlet/> for sub-pages
+  - Uses useLocation() to detect index (Exhibits page) vs sub-page (Planets or Spacecrafts)
+
+11. Planets Sub-Page (/exhibits/planets)
+  - Card grid (3 columns)
+    - Each card shows: planet JPG image, type badge, name, description, stats (distance, diameter, moons), Funfact
+
+12. Spacecrafts Sub-Page (/exhibits/spacecrafts)
+  - No state needed (all cards visible by default)
+  - Card grid (3 columns)
+  - Each card shows: 
+    -  name, description, stats grid (agency, launch year, status, distance),Key Achievement 
+
+13. Missions Page
+  - State per card: open, setOpen = useState(false) (inside MissionCDetails component)
+  - Expandable cards
+  - Each MissionCard:
+    - Header row: icon, phase badge, name, agency, target year, chevron arrow
+    - Summary text 
+    - Click : expands full description + key milestones list
+  
+
+14. About Page
+  - About the cosmos meuseum and our mission (simple text)
+
+15. Footer Component
+  - Bottom bar: copyright + year + CosmosMuseum
+

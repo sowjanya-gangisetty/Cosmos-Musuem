@@ -1,0 +1,163 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  transition: border-color var(--transition);
+}
+
+.card:hover {
+  border-color: var(--accent-gold);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.75rem 2rem 0;
+  cursor: pointer;
+}
+
+.cardLeft {
+  flex: 1;
+}
+
+.phase {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  margin-bottom: 0.6rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.cardAgency {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.cardRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.yearBadge {
+  text-align: right;
+}
+
+.yearLabel {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.yearValue {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.chevron {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.chevron.open {
+  transform: rotate(90deg);
+}
+
+.goal {
+  padding: 0.75rem 2rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  border-bottom: 1px solid transparent;
+}
+
+.expanded {
+  padding: 1.5rem 2rem 2rem;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(255,255,255,0.015);
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.desc {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.milestonesTitle {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.milestoneList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.milestone {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+}
+
+.milestoneCheck {
+  color: var(--accent);
+  font-size: 0.75rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .cardHeader {
+    padding: 1.25rem 1.25rem 0;
+    flex-direction: column;
+  }
+  .goal {
+    padding: 0.6rem 1.25rem 1.25rem;
+  }
+  .expanded {
+    padding: 1.25rem;
+  }
+  .cardRight {
+    align-self: flex-end;
+  }
+}

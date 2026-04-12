@@ -1,0 +1,46 @@
+.page {
+  padding-bottom: 5rem;
+}
+.main {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.mainContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.mainTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.mainTitle em {
+  font-style: normal;
+  display: block;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mainSubTitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+}
+
+
+
