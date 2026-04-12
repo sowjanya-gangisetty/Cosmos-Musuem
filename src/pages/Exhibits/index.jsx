@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation, Link } from "react-router-dom";
 import PageHeading from "../../components/PageHeading";
 import styles from "./exhibits.module.css";
 
@@ -10,8 +10,8 @@ function Exhibits() {
     <div>
       <PageHeading
         eventTitle="Gallery · Interactive Exhibits"
-        title="Explore Our" 
-        highlight="Exhibits" 
+        title="Explore Our"
+        highlight="Exhibits"
         subtitle="Dive deep into planetary science, spacecraft engineering, and the history of space exploration through our curated collections."
       />
 
@@ -23,7 +23,7 @@ function Exhibits() {
               `${styles.subLink} ${isActive ? styles.active : ""}`
             }
           >
-             Planets
+            Planets
           </NavLink>
           <NavLink
             to="/exhibits/spacecrafts"
@@ -31,23 +31,23 @@ function Exhibits() {
               `${styles.subLink} ${isActive ? styles.active : ""}`
             }
           >
-             Spacecrafts
+            Spacecrafts
           </NavLink>
         </div>
       </div>
 
       {isIndex ? (
         <div className={styles.indexGrid}>
-          <a href="/exhibits/planets" className={styles.indexCard}>
+          <Link to="/exhibits/planets" className={styles.indexCard}>
             <span className={styles.indexIcon}></span>
             <h2>Planets</h2>
             <p>Journey through all worlds of our solar system.</p>
-          </a>
-          <a href="/exhibits/spacecrafts" className={styles.indexCard}>
+          </Link>
+          <Link to="/exhibits/spacecrafts" className={styles.indexCard}>
             <span className={styles.indexIcon}></span>
             <h2>Spacecrafts</h2>
             <p>Historic vehicles that carried humans to the stars.</p>
-          </a>
+          </Link>
         </div>
       ) : (
         <Outlet />
