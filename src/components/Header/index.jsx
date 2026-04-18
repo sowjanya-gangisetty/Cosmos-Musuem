@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./header.module.css";
+import logo from "../../assets/logo.jpg"
 
 const navItems = [
   { to: "/", label: "Home", end: true },
@@ -16,7 +17,9 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <NavLink to="/" className={styles.logo} onClick={() => setMenuOpen(false)}>
-          <div className={styles.logoIcon}>🌌</div>
+          <div className={styles.logoIcon}>
+            <img src={logo} alt="logo" />
+          </div>
           <div className={styles.logoText}>
             CosmosMuseum
             <span className={styles.logoSub}>Space Exploration</span>

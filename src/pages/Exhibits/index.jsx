@@ -38,12 +38,12 @@ function Exhibits() {
 
       {isIndex ? (
         <div className={styles.indexGrid}>
-          <Link to="/exhibits/planets" className={styles.indexCard}>
+          <Link to="/exhibits/planets" className={`${styles.indexCard} ${styles.bgPlanets}`}>
             <span className={styles.indexIcon}></span>
             <h2>Planets</h2>
             <p>Journey through all worlds of our solar system.</p>
           </Link>
-          <Link to="/exhibits/spacecrafts" className={styles.indexCard}>
+          <Link to="/exhibits/spacecrafts" className={`${styles.indexCard} ${styles.bgSpacecrafts}`}>
             <span className={styles.indexIcon}></span>
             <h2>Spacecrafts</h2>
             <p>Historic vehicles that carried humans to the stars.</p>

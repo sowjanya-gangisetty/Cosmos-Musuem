@@ -53,11 +53,18 @@
   transition: all var(--transition);
   cursor: pointer;
   display: block;
+  font-weight: 800;
+  background-size: cover;
 }
-
+.bgPlanets{
+  background-image: url("../../assets/planets.jpg");
+}
+.bgSpacecrafts{
+  background-image: url("../../assets/spacecrafts.jpg");
+}
 .indexCard:hover {
   border-color: var(--accent-gold);
-  transform: translateY(-3px);
+  font-weight:bolder;
 }
 
 .indexIcon {
@@ -74,7 +81,6 @@
 
 .indexCard p {
   font-size: 0.85rem;
-  color: var(--text-secondary);
 }
 
 @media (max-width: 600px) {
