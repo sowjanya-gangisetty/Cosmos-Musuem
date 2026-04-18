@@ -22,11 +22,12 @@ function Planets() {
                     className={styles.planetImg}
                   />
                 </div>
-                <span className={styles.type}>{planet.type}</span>
+                
               </div>
 
               <div className={styles.cardBody}>
                 <h3 className={styles.name}>{planet.name}</h3>
+                <span className={styles.type}>{planet.type}</span>
                 <p className={styles.desc}>{planet.description}</p>
                 <div className={styles.stats}>
                   <div className={styles.stat}>

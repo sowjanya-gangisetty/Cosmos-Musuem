@@ -75,7 +75,7 @@ export const planets = [
       "Famous for its stunning ring system made of ice and rock. Saturn is the least dense planet — it would float on water. Its moon Titan has a thick atmosphere and liquid methane lakes.",
     color: "#e4d191",
     funFact: "Saturn's rings are only about 10 meters thick.",
-    image: "saturn.jpg",
+    image: "saturn1.jpg",
   },
   {
     id: "uranus",
