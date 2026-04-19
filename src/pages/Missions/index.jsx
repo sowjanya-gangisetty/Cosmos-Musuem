@@ -4,8 +4,6 @@ import PageHeading from "../../components/PageHeading";
 import styles from "./missions.module.css";
 import MissionDetailes from "../../components/MissionDetails";
 
-
-
 const Missions = () => {
   return (
     <div>

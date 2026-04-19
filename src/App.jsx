@@ -20,7 +20,6 @@ function App() {
           </Route>
           <Route path="missions" element={<Missions />} />
           <Route path="about" element={<About />} />
-          {/* 404 */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
