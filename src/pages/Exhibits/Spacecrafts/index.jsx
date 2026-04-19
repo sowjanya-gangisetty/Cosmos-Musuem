@@ -1,7 +1,7 @@
 import { spacecrafts } from "../../../data/museumData";
 import styles from "./spacecrafts.module.css";
 
-function Spacecrafts() {
+const Spacecrafts = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>

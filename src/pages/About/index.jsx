@@ -2,7 +2,7 @@
 import PageHeading from "../../components/PageHeading";
 import styles from "./about.module.css";
 
-function About() {
+const About = () => {
   return (
     <div>
       <PageHeading

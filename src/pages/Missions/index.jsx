@@ -4,9 +4,7 @@ import PageHeading from "../../components/PageHeading";
 import styles from "./missions.module.css";
 import MissionDetailes from "../../components/MissionDetails";
 
-
-
-function Missions() {
+const Missions = () => {
   return (
     <div>
       <PageHeading

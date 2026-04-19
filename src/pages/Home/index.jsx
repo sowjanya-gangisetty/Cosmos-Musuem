@@ -1,7 +1,6 @@
-
 import styles from "./home.module.css";
 
-function Home() {
+const Home = () => {
 
   return (
     <div className={styles.page}>

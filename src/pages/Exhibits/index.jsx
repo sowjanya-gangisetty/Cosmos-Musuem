@@ -2,7 +2,7 @@ import { NavLink, Outlet, useLocation, Link } from "react-router-dom";
 import PageHeading from "../../components/PageHeading";
 import styles from "./exhibits.module.css";
 
-function Exhibits() {
+const Exhibits = () => {
   const { pathname } = useLocation();
   const isIndex = pathname === "/exhibits" || pathname === "/exhibits/";
 

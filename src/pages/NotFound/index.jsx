@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./notFound.module.css";
 
-function NotFound() {
+const NotFound = () => {
   return (
     <div className={styles.page}>
       <span className={styles.icon}>🌑</span>

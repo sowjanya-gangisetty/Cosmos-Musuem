@@ -3,7 +3,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import styles from "./layout.module.css";
 
-function Layout() {
+const Layout =() => {
   return (
     <div className={styles.layout}>
       <div className={styles.starBg} aria-hidden="true" />
