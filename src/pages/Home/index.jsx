@@ -7,7 +7,7 @@ const Home = () => {
   const [apodLoading, setApodLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_NASA_API_KEY}`)
+    fetch(`${import.meta.env.VITE_NASA_API_KEY}`)
       .then((response) => response.json())
       .then((data) => {
         setApod(data);
