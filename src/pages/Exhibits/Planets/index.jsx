@@ -2,7 +2,7 @@ import { planets } from "../../../data/museumData";
 import styles from "./planets.module.css";
 import { getImageURL } from "../../../utils/imagesFunction";
 
-function Planets() {
+const Planets = () => {
 
   return (
     <div className={styles.page}>

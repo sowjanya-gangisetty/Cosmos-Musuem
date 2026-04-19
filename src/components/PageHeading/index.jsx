@@ -1,6 +1,6 @@
 import styles from "./pageHeading.module.css";
 
-function PageHeading({ eventTitle, title, highlight, subtitle }) {
+const PageHeading = ({ eventTitle, title, highlight, subtitle })=>{
   return (
     <section className={styles.main}>
       {eventTitle && <span className={styles.eventTitle}>{eventTitle}</span>}

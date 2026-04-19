@@ -6,7 +6,7 @@ import MissionDetailes from "../../components/MissionDetails";
 
 
 
-function Missions() {
+const Missions = () => {
   return (
     <div>
       <PageHeading

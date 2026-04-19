@@ -10,7 +10,7 @@ const navItems = [
   { to: "/about", label: "About" },
 ];
 
-function Header() {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (

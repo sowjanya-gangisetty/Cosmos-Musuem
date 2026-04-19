@@ -1,7 +1,7 @@
 import styles from "./missionDetails.module.css";
 import { useState } from "react";
 
-function MissionDetails({ mission }) {
+const MissionDetails = ({ mission }) => {
   const [open, setOpen] = useState(false);
   
   return (
