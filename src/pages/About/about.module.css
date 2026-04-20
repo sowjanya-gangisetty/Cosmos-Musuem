@@ -25,22 +25,8 @@
   margin-bottom: 5rem;
 }
 
-.missionGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
 }
-
-.missionText {
-  display: flex;
-  flex-direction: column;
-}
-
-.missionText p {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-
