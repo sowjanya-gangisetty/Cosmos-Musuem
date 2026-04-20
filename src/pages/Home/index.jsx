@@ -19,7 +19,6 @@ const Home = () => {
   return (
     <div className={styles.page}>
       <section className={styles.main}>
-        
         <div className={styles.mainContent}>
           <h1 className={styles.mainTitle}>
             Explore the<em>Universe</em>
