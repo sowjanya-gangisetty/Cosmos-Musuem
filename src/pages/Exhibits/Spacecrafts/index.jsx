@@ -2,12 +2,13 @@ import { spacecrafts } from "../../../data/museumData";
 import styles from "./spacecrafts.module.css";
 
 const Spacecrafts = () => {
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <h2 className={styles.heading}>Historic Spacecraft</h2>
 
-        <div className={styles.grid}>
+        <div className={styles.cardGrid}>
           {spacecrafts.map((spacecraft) => (
             <article key={spacecraft.id} className={styles.card}>
               <div className={styles.cardTop}>
@@ -18,13 +19,13 @@ const Spacecrafts = () => {
 
               <div className={styles.cardBody}>
                 <h3 className={styles.name}>{spacecraft.name}</h3>
-                <p className={styles.desc}>{spacecraft.description}</p>
+                <p className={styles.description}>{spacecraft.description}</p>
                 <div className={styles.stats}>
                   {[
-                    { label: "Agency",            value: spacecraft.agency },
-                    { label: "Launch Year",        value: spacecraft.launchYear },
-                    { label: "Status",             value: spacecraft.status },
-                    { label: "Distance Traveled",  value: spacecraft.distanceTraveled },
+                    { label: "Agency", value: spacecraft.agency },
+                    { label: "Launch Year", value: spacecraft.launchYear },
+                    { label: "Status", value: spacecraft.status },
+                    { label: "Distance Traveled", value: spacecraft.distanceTraveled },
                   ].map(({ label, value }) => (
                     <div key={label} className={styles.stat}>
                       <span className={styles.statLabel}>{label}</span>

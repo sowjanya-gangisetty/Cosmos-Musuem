@@ -1,9 +1,8 @@
 .page {
-  padding-bottom: 5rem;
+  padding-bottom: 4.5rem;
 }
 
 .main {
-  min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +42,7 @@
   margin: 0 auto 2.5rem;
 }
 
-/* APOD Section*/
+/* APOD Section */
 .apodSection {
   max-width: 1200px;
   margin: 5rem auto 0;
@@ -160,24 +159,9 @@
   animation: spin 0.8s linear infinite;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (max-width: 900px) {
-  .grid3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .apodCard {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
-  .grid3 {
-    grid-template-columns: 1fr;
-  }
-}

@@ -1,7 +1,6 @@
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  
   border-radius: var(--radius-large);
   overflow: hidden;
   transition: border-color var(--transition);
@@ -103,12 +102,7 @@
   animation: slideDown 0.2s ease;
 }
 
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.desc {
+.description {
   font-size: 0.83rem;
   color: var(--text-secondary);
   line-height: 1.7;

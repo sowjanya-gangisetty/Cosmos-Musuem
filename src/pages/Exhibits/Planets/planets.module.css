@@ -21,39 +21,10 @@
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 700;
+  margin-bottom: 2rem;
 }
 
-.filters {
-  display: flex;
-  gap: 0.4rem;
-}
-
-.filterBtn {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  background: transparent;
-  border: 1px solid var(--border-subtle);
-  padding: 0.4rem 0.9rem;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.filterBtn:hover {
-  color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.filterBtn.active {
-  color: var(--accent-gold);
-  border-color: var(--border-accent);
-  background: rgba(240, 192, 64, 0.08);
-}
-
-.grid {
+.cardGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
@@ -116,7 +87,7 @@
   margin-bottom: 0.6rem;
 }
 
-.desc {
+.description {
   font-size: 0.8rem;
   color: var(--text-secondary);
   line-height: 1.65;
@@ -150,23 +121,11 @@
   font-weight: 700;
 }
 
-.expanded {
+.cardBottom {
   padding: 1.25rem 1.75rem;
   border-top: 1px solid var(--border-subtle);
   background: rgba(240, 192, 64, 0.04);
   animation: slideDown 0.2s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .funFact {
@@ -185,18 +144,14 @@
 }
 
 @media (max-width: 900px) {
-  .grid {
+  .cardGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 560px) {
-  .grid {
+  .cardGrid {
     grid-template-columns: 1fr;
   }
 
-  .toolbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }

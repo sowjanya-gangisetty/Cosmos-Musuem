@@ -25,7 +25,7 @@ const MissionDetails = ({ mission }) => {
 
       {open && (
         <div className={styles.expanded}>
-          <p className={styles.desc}>{mission.description}</p>
+          <p className={styles.description}>{mission.description}</p>
           <div className={styles.milestones}>
             <h4 className={styles.milestonesTitle}>Key Milestones</h4>
             <ul className={styles.milestoneList}>

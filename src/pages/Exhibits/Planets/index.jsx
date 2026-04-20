@@ -7,13 +7,10 @@ const Planets = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <div className={styles.toolbar}>
-          <h2 className={styles.heading}>Solar System Planets</h2>
-        </div>
-        <div className={styles.grid}>
+       <h2 className={styles.heading}>Solar System Planets</h2>
+        <div className={styles.cardGrid}>
           {planets.map((planet) => (
             <article key={planet.id} className={styles.card}>
-
               <div className={styles.cardTop}>
                 <div className={styles.planetImgWrap}>
                   <img
@@ -22,13 +19,12 @@ const Planets = () => {
                     className={styles.planetImg}
                   />
                 </div>
-                
               </div>
 
               <div className={styles.cardBody}>
                 <h3 className={styles.name}>{planet.name}</h3>
                 <span className={styles.type}>{planet.type}</span>
-                <p className={styles.desc}>{planet.description}</p>
+                <p className={styles.description}>{planet.description}</p>
                 <div className={styles.stats}>
                   <div className={styles.stat}>
                     <span className={styles.statLabel}>Distance</span>
@@ -45,7 +41,7 @@ const Planets = () => {
                 </div>
               </div>
 
-              <div className={styles.expanded}>
+              <div className={styles.cardBottom}>
                 <p className={styles.funFact}>
                   <span className={styles.funFactLabel}>Fun Fact</span>
                   {planet.funFact}

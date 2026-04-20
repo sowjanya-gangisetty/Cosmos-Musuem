@@ -43,7 +43,7 @@ const Header = () => {
 
         <button
           className={styles.menuBtn}
-          onClick={() => setMenuOpen((o) => !o)}
+          onClick={() => setMenuOpen((open) => !open)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >

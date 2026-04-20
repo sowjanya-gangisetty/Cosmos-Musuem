@@ -4,11 +4,11 @@ import styles from "./about.module.css";
 
 const About = () => {
   return (
-    <div>
+    <div className={styles.page}>
       <PageHeading
         eventTitle="Our Story"
         title='About'
-        highlight="CosmosMuseum"
+        highlight="Cosmos Museum"
         subtitle="A world-class destination for space science, exploration history, and the wonder of the cosmos — inspiring curious minds since 1998."
       />
 
