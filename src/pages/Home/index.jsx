@@ -6,14 +6,23 @@ const Home = () => {
   const [apod, setApod] = useState(null);
   const [apodLoading, setApodLoading] = useState(true);
 
+  const fetchApod = async () => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_NASA_API_KEY}`)
+      if (!response.ok) {
+        throw new Error("Failed to fetch APOD data");
+      }
+      const data = await response.json();
+      setApod(data);
+    } catch (error) {
+      console.log("NASA APOD fetch failed:", error)
+    }
+    setApodLoading(false);
+  }
+  console.log(import.meta.env.VITE_NASA_API_KEY)
+
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_NASA_API_KEY}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setApod(data);
-        setApodLoading(false);
-      })
-      .catch(() => setApodLoading(false));
+    fetchApod()
   }, []);
 
   return (
