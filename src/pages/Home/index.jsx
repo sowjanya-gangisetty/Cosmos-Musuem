@@ -8,10 +8,11 @@ const Home = () => {
 
   const fetchApod = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_NASA_API_KEY}`)
+      const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_NASA_API_KEY}`)
       if (!response.ok) {
         throw new Error("Failed to fetch APOD data");
       }
+      console.log(response)
       const data = await response.json();
       setApod(data);
     } catch (error) {
@@ -19,7 +20,7 @@ const Home = () => {
     }
     setApodLoading(false);
   }
-  console.log(import.meta.env.VITE_NASA_API_KEY)
+  
 
   useEffect(() => {
     fetchApod()
