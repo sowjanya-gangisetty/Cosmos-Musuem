@@ -54,7 +54,7 @@ const Home = () => {
                   <source src={apod.url} type="video/mp4" />
                 </video>
               ) : (
-                <div className={styles.apodFallback}>Media Unavailable</div>
+                <div className={styles.apodFallback}>Image Unavailable</div>
               )}
             </div>
             <div className={styles.apodContent}>
