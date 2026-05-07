@@ -31,7 +31,7 @@ const Home = () => {
         </div>
       </section>
 
-    <section className={styles.apodSection}>
+      <section className={styles.apodSection}>
         <div className={styles.sectionHeader}>
           <div>
             <span className={styles.sectionLabel}>NASA API · Live Data</span>
@@ -49,8 +49,12 @@ const Home = () => {
             <div className={styles.apodImage}>
               {apod.media_type === "image" ? (
                 <img src={apod.url} alt={apod.title} />
+              ) : apod.media_type === "video" ? (
+                <video controls className={styles.apodVideo}>
+                  <source src={apod.url} type="video/mp4" />
+                </video>
               ) : (
-                <div className={styles.apodFallback}>Image Unavailable</div>
+                <div className={styles.apodFallback}>Media Unavailable</div>
               )}
             </div>
             <div className={styles.apodContent}>
@@ -76,7 +80,7 @@ const Home = () => {
 
     </div>
 
-    
+
   );
 }
 
